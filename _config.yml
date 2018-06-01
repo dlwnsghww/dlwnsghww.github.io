@@ -1,158 +1,117 @@
-# Site settings
-title: "JUNO BLOG"
-description: "준호의 블로그에 오신 걸 환영합니다"
-url: "https://dlwnsghww.github.io"
+# SITE CONFIGURATION
+baseurl: "/Type-on-Strap"
+url: "https://sylhare.github.io"
+title: Type on Strap # site's title
+description: "A website with blog posts and pages" # used by search engines
 
 
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: Type on Strap # blog's title
+  avatar: assets/img/triangle.svg
+  favicon: assets/favicon.ico
+  gravatar: # Email MD5 hash
+
+  # Header and footer text
+  header_text: > #two or three lines to describe your site
+     <p>Change header text in <code>_config.yml</code> <br> to update this feature.</p>
+  header_text_feature_image: assets/img/pexels/triangular.jpeg
+  footer_text: >
+   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+
+  # Icons
+  rss: true  # Make sure you created a feed.xml with feed.xml layout
+  email_address: # Full email address, e.g. "sam@example.com"
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  gitlab:
+  github: "sylhare"
+  google_plus:
+  instagram:
+  keybase:
+  linkedin:  # Full URL
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:  # Full URL
+  steam:
+  tumblr:
+  twitter: # "twitter username"
+  vimeo:
+  wordpress:
+  youtube:
+  
+  # Sharing options
+  share_buttons:
+    facebook: true
+    twitter: true
+    google_plus: true
+    tumblr:
+    pinterest:
+    pocket:
+    reddit: true
+    linkedin:
+    wordpress:
+    email: true
+
+  # Scripts / Features 
+  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  disqus_shortname:
+  katex: true # Enable if using math markup
+  
+  special_page:
+    search: 
+      icon: "search" # Assuming page link and icon are the same
+      enabled: true
+    tags:
+      icon: "tags"
+      enabled: true
+  
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_share_on: "Share on"
+  str_add_to: "Add to"
+  str_email: "Email"
+  str_tweet: "Tweet"
+  str_pin_it: "Pin it"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
+  str_continue_reading: "Continue reading"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: true
+  
+  
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
 
 
-# Secondary Parameters
-baseurl: "/"
-header-img: img/home-bg.jpg
-headercolor: "#FFFFFF"
-logo: /img/logos/Project-Pages-New-Logo-Inverted.png
+# PORTFOLIO
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
 
-# Tertiary Parameters
-github_username:  dlwnsghww@naver.com   
-project_repository: dlwnsghww.github.io
-disqus_shortname: 
-g-analytics: 
-altmetric: true
 
-# Build settings
-gems: [jekyll-paginate]
+# BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
-# Jekyll Settings
-
-defaults:
-  -
-    scope:
-      path: "projects"
-      type: "pages"
-    values:
-      layout: "project"
-      header-img: "img/home-bg.jpg"
-
-# Prose Settings
-prose:
-  ignore: ['feed.xml', '/stl', '/ply', '/js', '/plugin', '/lib', '/projectors', '_layouts', '/_includes', 'Gruntfile.js', 'package.json', 'proselinks.jsonp', 'ppanchor.matin', '.gitignore', '/search', '/css', '/img', 'favicon.png','_data/*.json','LICENSES.md','README.md','colorscheme.scss','members.html','mentions.html','index.html']
-  siteurl: 'http://projectpages.github.io/project-pages/'
-  ispp: true
-  media: 'img'
-  metadata:
-    projects:
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-      - name: "description"
-        field:
-          element: "text"
-          label: "Description"
-          value: ""
-      - name: "category"
-        field:
-          element: "text"
-          label: "Project"
-          value: ""           
-    _posts:
-      - name: "subtitle"
-        field:
-          element: "text"
-          label: "Sub-Title (Short Description)"
-          value: ""
-      - name: "layout"
-        field:
-          element: "select"
-          label: "Choose Layout"
-          placeholder: "Layouts"
-          options:
-            - name: "Post"
-              value: "post"
-            - name: "Slide"
-              value: "slide"
-            - name: "Projector"
-              value: "projector"
-            - name: "Notebook"
-              value: "notebook"
-            - name: "Ply Surface"
-              value: "plysurface"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-      - name: "author"
-        field:
-          element: "text"
-          label: "Author"
-          value: ""
-      - name: "tags"
-        field:
-          element: "text"
-          label: "Tags (seperate with whitespace)"
-          value: ""
-      - name: "category"
-        field:
-          element: "text"
-          label: "Project"
-          value: ""    
-      - name: "horizontal"
-        field:
-          element: "hidden"
-          value: </section></section><section markdown="1" data-background="http://projectpages.github.io/project-pages/img/slidebackground.png"><section markdown="1">
-      - name: "vertical"
-        field:
-          element: "hidden"
-          value: </section><section markdown="1">
-      - name: "slideinit"
-        field:
-          element: "hidden"
-          value: <section markdown="1" data-background="http://projectpages.github.io/project-pages/img/slidebackground.png"><section markdown="1">
-      - name: "theme"
-        field:
-          element: "select"
-          label: "Theme (Slide)"
-          placeholder: "Theme (Slide)"
-          options:
-            - name: "Beige"
-              value: "beige"
-            - name: "Blood"
-              value: "blood"
-            - name: "Moon"
-              value: "moon"          
-            - name: "Night"
-              value: "night"
-            - name: "Sky"
-              value: "sky"
-            - name: "Solarized"
-              value: "solarized"             
-      - name: "trans"
-        field:
-          element: "select"
-          label: "Transition (Slide)"
-          placeholder: "Transition (Slide)"
-          options:
-            - name: "Cube"
-              value: "cube"
-            - name: "Page"
-              value: "page"
-            - name: "Concave"
-              value: "concave"          
-            - name: "Linear"
-              value: "linear"
-            - name: "Fade"
-              value: "fade"
-            - name: "None"
-              value: "none"             
-      - name: "visualworkflow"
-        field:
-          element: "checkbox"
-          label: "Visual Workflow Chart (Some Layouts)"
-          value: "true"
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag]
+#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png", "package.json", "node_modules", "gulpfile.js", ".idea/*"]
