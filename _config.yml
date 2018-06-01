@@ -1,7 +1,7 @@
 # Site settings
-title: Project Pages
-description: "An Integrated Scientific Blogging Template"
-url: "https://projectpages.github.io"
+title: "JUNO BLOG"
+description: "준호의 블로그에 오신 걸 환영합니다"
+url: "https://dlwnsghww.github.io"
 
 
 
@@ -13,10 +13,10 @@ headercolor: "#FFFFFF"
 logo: /img/logos/Project-Pages-New-Logo-Inverted.png
 
 # Tertiary Parameters
-github_username:  projectpages
-project_repository: project-pages
-disqus_shortname: project-pages
-g-analytics: UA-75881392-1
+github_username:  dlwnsghww@naver.com   
+project_repository: dlwnsghww.github.io
+disqus_shortname: 
+g-analytics: 
 altmetric: true
 
 # Build settings
